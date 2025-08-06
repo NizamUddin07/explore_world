@@ -9,16 +9,17 @@ class NextStrip extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.arrow_back, size: 28),
+            Padding(
+              padding: EdgeInsetsGeometry.only(top: 30, left: 15, right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+                  CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/hill.jpg"),
+                  ),
+                ],
               ),
-            ),
-            Align(
-              alignment: Alignment.topRight,
-              child: IconButton(onPressed: () {}, icon: Icon(Icons.man)),
             ),
           ],
         ),
